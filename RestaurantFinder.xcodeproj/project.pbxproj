@@ -62,13 +62,45 @@
 			isa = PBXGroup;
 			children = (
 				5CF15ECC210F068300F0F4A6 /* AppDelegate.swift */,
-				5CF15ECE210F068300F0F4A6 /* ViewController.swift */,
-				5CF15ED0210F068300F0F4A6 /* Main.storyboard */,
-				5CF15ED3210F069000F0F4A6 /* Assets.xcassets */,
-				5CF15ED5210F069000F0F4A6 /* LaunchScreen.storyboard */,
-				5CF15ED8210F069000F0F4A6 /* Info.plist */,
+				5CF15EDE210F084D00F0F4A6 /* Resources */,
+				5CF15EDF210F084F00F0F4A6 /* ViewControllers */,
+				5CF15EE0210F085300F0F4A6 /* Models */,
+				5CF15EE1210F087D00F0F4A6 /* Stroyboards */,
 			);
 			path = RestaurantFinder;
+			sourceTree = "<group>";
+		};
+		5CF15EDE210F084D00F0F4A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CF15ED3210F069000F0F4A6 /* Assets.xcassets */,
+				5CF15ED8210F069000F0F4A6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5CF15EDF210F084F00F0F4A6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5CF15ECE210F068300F0F4A6 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5CF15EE0210F085300F0F4A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5CF15EE1210F087D00F0F4A6 /* Stroyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5CF15ED0210F068300F0F4A6 /* Main.storyboard */,
+				5CF15ED5210F069000F0F4A6 /* LaunchScreen.storyboard */,
+			);
+			path = Stroyboards;
 			sourceTree = "<group>";
 		};
 		7AB93FA7DBF394F1AE77BB53 /* Frameworks */ = {
@@ -371,7 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ASZ4Y47T7;
-				INFOPLIST_FILE = RestaurantFinder/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RestaurantFinder/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,7 +411,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yaroslav.RestaurantFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -390,7 +422,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ASZ4Y47T7;
-				INFOPLIST_FILE = RestaurantFinder/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RestaurantFinder/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yaroslav.RestaurantFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
