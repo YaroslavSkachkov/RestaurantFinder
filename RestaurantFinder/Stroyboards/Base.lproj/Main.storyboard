@@ -44,5 +44,98 @@
             </objects>
             <point key="canvasLocation" x="20" y="134"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1HW-0Y-pGq">
+            <objects>
+                <viewController storyboardIdentifier="RestaurantInformation" id="Pjm-tJ-oeG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="THO-As-D7I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bz2-JM-5xe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="cEP-Oc-eYo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant's name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cok-Zk-4bZ">
+                                <rect key="frame" x="114" y="60" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxW-0a-9Uv">
+                                <rect key="frame" x="166" y="101" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-2Y-4px">
+                                <rect key="frame" x="16" y="183" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eId-Jh-f5D">
+                                <rect key="frame" x="317" y="183" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant's coordinates:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee5-iM-uoy">
+                                <rect key="frame" x="90" y="142" width="195" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant's address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csL-ny-2HI">
+                                <rect key="frame" x="104.5" y="224" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant's address:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8A-hu-XSP">
+                                <rect key="frame" x="16" y="265" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bz2-JM-5xe" firstAttribute="trailing" secondItem="2gg-gL-U9W" secondAttribute="trailing" id="1gJ-iV-4aj"/>
+                            <constraint firstItem="r8A-hu-XSP" firstAttribute="centerX" secondItem="THO-As-D7I" secondAttribute="centerX" id="35T-J3-f3j"/>
+                            <constraint firstItem="r8A-hu-XSP" firstAttribute="top" secondItem="csL-ny-2HI" secondAttribute="bottom" constant="20" id="FG8-JG-Tp3"/>
+                            <constraint firstItem="eId-Jh-f5D" firstAttribute="top" secondItem="Ee5-iM-uoy" secondAttribute="bottom" constant="20" id="JNq-0a-Cgk"/>
+                            <constraint firstItem="ahl-2Y-4px" firstAttribute="top" secondItem="Ee5-iM-uoy" secondAttribute="bottom" constant="20" id="LqO-Or-cDy"/>
+                            <constraint firstItem="2gg-gL-U9W" firstAttribute="trailing" secondItem="eId-Jh-f5D" secondAttribute="trailing" constant="16" id="M8n-yM-Hnn"/>
+                            <constraint firstItem="csL-ny-2HI" firstAttribute="centerX" secondItem="THO-As-D7I" secondAttribute="centerX" id="Mb0-gt-baW"/>
+                            <constraint firstItem="ahl-2Y-4px" firstAttribute="leading" secondItem="2gg-gL-U9W" secondAttribute="leading" constant="16" id="NHj-Zv-0zX"/>
+                            <constraint firstItem="2gg-gL-U9W" firstAttribute="trailing" secondItem="r8A-hu-XSP" secondAttribute="trailing" constant="16" id="OEe-cY-6WA"/>
+                            <constraint firstItem="Ee5-iM-uoy" firstAttribute="top" secondItem="QxW-0a-9Uv" secondAttribute="bottom" constant="20" id="PuO-ra-TYb"/>
+                            <constraint firstItem="Bz2-JM-5xe" firstAttribute="top" secondItem="2gg-gL-U9W" secondAttribute="top" id="QSN-K9-Seo"/>
+                            <constraint firstItem="QxW-0a-9Uv" firstAttribute="centerX" secondItem="THO-As-D7I" secondAttribute="centerX" id="WBH-8O-hsu"/>
+                            <constraint firstItem="cok-Zk-4bZ" firstAttribute="centerX" secondItem="THO-As-D7I" secondAttribute="centerX" id="Wm1-7i-kzT"/>
+                            <constraint firstItem="Ee5-iM-uoy" firstAttribute="centerX" secondItem="THO-As-D7I" secondAttribute="centerX" id="XYj-P4-fWc"/>
+                            <constraint firstItem="cok-Zk-4bZ" firstAttribute="top" secondItem="Bz2-JM-5xe" secondAttribute="bottom" constant="40" id="cNn-ln-7Ad"/>
+                            <constraint firstItem="r8A-hu-XSP" firstAttribute="leading" secondItem="2gg-gL-U9W" secondAttribute="leading" constant="16" id="l2T-tl-qEg"/>
+                            <constraint firstItem="QxW-0a-9Uv" firstAttribute="top" secondItem="cok-Zk-4bZ" secondAttribute="bottom" constant="20" id="oTH-11-0X8"/>
+                            <constraint firstItem="csL-ny-2HI" firstAttribute="top" secondItem="ahl-2Y-4px" secondAttribute="bottom" constant="20" id="uDS-CZ-apz"/>
+                            <constraint firstItem="Bz2-JM-5xe" firstAttribute="leading" secondItem="2gg-gL-U9W" secondAttribute="leading" id="w70-8j-iv9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2gg-gL-U9W"/>
+                    </view>
+                    <connections>
+                        <outlet property="restaurantNameLabel" destination="QxW-0a-9Uv" id="N6V-h5-Kh9"/>
+                        <outlet property="restaurantPhotoImageView" destination="Bz2-JM-5xe" id="t2U-Iz-bzH"/>
+                        <outlet property="restaurantsAddressLabel" destination="r8A-hu-XSP" id="Zc7-2R-lRp"/>
+                        <outlet property="restaurantsLatLabel" destination="ahl-2Y-4px" id="Gqw-dR-3xm"/>
+                        <outlet property="restaurantsLngLabel" destination="eId-Jh-f5D" id="EBj-IU-Z27"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTz-in-xqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2119" y="134"/>
+        </scene>
     </scenes>
 </document>
