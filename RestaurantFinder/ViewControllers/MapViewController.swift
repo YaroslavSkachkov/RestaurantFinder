@@ -12,11 +12,15 @@ import GooglePlaces
 
 class MapViewController: UIViewController {
     
+    private let dataProvider = GoogleDataProvider()
+    private let searchRadius: Double = 20000
+    
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var mapView: GMSMapView!
     var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 10
+    var searchedTypes = ["bar", "cafe", "restaurant"]
     
     var defaultLocation = CLLocation(latitude: -33.86, longitude: 151.20)
     
@@ -42,6 +46,25 @@ class MapViewController: UIViewController {
         view.addSubview(mapView)
         mapView.isHidden = false
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        restaurantsFinder()
+    }
+    
+    func restaurantsFinder() {
+        if let myLocation = locationManager.location {
+            print(myLocation.coordinate)
+            dataProvider.fetchPlacesNearCoordinate(myLocation.coordinate, radius: searchRadius, types: searchedTypes) { places in
+                for place in places {
+                    let marker = PlaceMarker(place: place)
+                    marker.title = place.name
+                    marker.map = self.mapView
+                    marker.userData = place
+                }
+            }
+        }
     }
     
 }
