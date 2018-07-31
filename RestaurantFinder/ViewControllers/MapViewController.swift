@@ -113,6 +113,20 @@ extension MapViewController: CLLocationManagerDelegate {
 extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         print(marker.position)
+        let restaurantInfoVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RestaurantInformation") as? RestaurantInformation
+        self.navigationController?.pushViewController(restaurantInfoVC!, animated: true)
+        
+        if let data = marker.userData as? Results {
+            restaurantInfoVC?.restaurantName = data.name
+            restaurantInfoVC?.restaurantLat = data.geometry?.location?.lat?.description
+            restaurantInfoVC?.restaurantLng = data.geometry?.location?.lng?.description
+            restaurantInfoVC?.restaurantAddress = data.vicinity
+        }
+        
+        GoogleDataProvider.resultsArr = []
+        mapView.clear()
+        print(marker.userData)
+        
         return true
     }
 }

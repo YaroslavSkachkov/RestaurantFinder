@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="20" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant Information-->
         <scene sceneID="1HW-0Y-pGq">
             <objects>
-                <viewController storyboardIdentifier="RestaurantInformation" id="Pjm-tJ-oeG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RestaurantInformation" id="Pjm-tJ-oeG" customClass="RestaurantInformation" customModule="RestaurantFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="THO-As-D7I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
