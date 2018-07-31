@@ -20,7 +20,7 @@ class MapViewController: UIViewController {
     var mapView: GMSMapView!
     var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 10
-    var searchedTypes = ["bar", "cafe", "restaurant"]
+    var searchedTypes = ["restaurant"]
     
     var defaultLocation = CLLocation(latitude: -33.86, longitude: 151.20)
     
