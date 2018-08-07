@@ -16,19 +16,21 @@ class RestaurantInformation: UIViewController {
     @IBOutlet weak var restaurantsAddressLabel: UILabel!
     @IBOutlet weak var restaurantPhotoImageView: UIImageView!
     
-    var restaurantName: String?
-    var restaurantLat: String?
-    var restaurantLng: String?
-    var restaurantAddress: String?
-    var restauurantPhotoReference: String?
+    private let dataProvider = GoogleDataProvider.sharedGoogleDataProvider
+    
+    var restaurant: Place?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        restaurantNameLabel.text = restaurantName
-        restaurantsLatLabel.text = restaurantLat
-        restaurantsLngLabel.text = restaurantLng
-        restaurantsAddressLabel.text = restaurantAddress
+        dataProvider.fetchPhotoFromReference((restaurant?.photos![0].photo_reference)!) { image in
+            self.restaurantPhotoImageView.image = image
+        }
+        
+        restaurantNameLabel.text = restaurant?.name
+        restaurantsLatLabel.text = String(restaurant?.geometry?.location?.lat ?? 0)
+        restaurantsLngLabel.text = String(restaurant?.geometry?.location?.lng ?? 0)
+        restaurantsAddressLabel.text = restaurant?.vicinity
         
         self.navigationController?.title = "Restaurant Information"
     }
