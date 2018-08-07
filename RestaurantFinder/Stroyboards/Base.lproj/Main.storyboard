@@ -52,10 +52,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bz2-JM-5xe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bz2-JM-5xe">
                                 <rect key="frame" x="0.0" y="20" width="375" height="0.0"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" id="cEP-Oc-eYo"/>
+                                    <constraint firstAttribute="height" id="co2-5r-PwT"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant's name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cok-Zk-4bZ">
@@ -128,6 +128,7 @@
                     <connections>
                         <outlet property="restaurantNameLabel" destination="QxW-0a-9Uv" id="N6V-h5-Kh9"/>
                         <outlet property="restaurantPhotoImageView" destination="Bz2-JM-5xe" id="t2U-Iz-bzH"/>
+                        <outlet property="restaurantPhotoImageViewHeightConstraint" destination="co2-5r-PwT" id="ARv-cg-ioJ"/>
                         <outlet property="restaurantsAddressLabel" destination="r8A-hu-XSP" id="Zc7-2R-lRp"/>
                         <outlet property="restaurantsLatLabel" destination="ahl-2Y-4px" id="Gqw-dR-3xm"/>
                         <outlet property="restaurantsLngLabel" destination="eId-Jh-f5D" id="EBj-IU-Z27"/>

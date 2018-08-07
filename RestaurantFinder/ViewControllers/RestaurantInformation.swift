@@ -15,6 +15,7 @@ class RestaurantInformation: UIViewController {
     @IBOutlet weak var restaurantsLngLabel: UILabel!
     @IBOutlet weak var restaurantsAddressLabel: UILabel!
     @IBOutlet weak var restaurantPhotoImageView: UIImageView!
+    @IBOutlet weak var restaurantPhotoImageViewHeightConstraint: NSLayoutConstraint!
     
     private let dataProvider = GoogleDataProvider.sharedGoogleDataProvider
     
@@ -26,7 +27,7 @@ class RestaurantInformation: UIViewController {
         dataProvider.fetchPhotoFromReference((restaurant?.photos![0].photo_reference)!) { image in
             self.restaurantPhotoImageView.image = image
         }
-        
+        restaurantPhotoImageViewHeightConstraint.isActive = false
         restaurantNameLabel.text = restaurant?.name
         restaurantsLatLabel.text = String(restaurant?.geometry?.location?.lat ?? 0)
         restaurantsLngLabel.text = String(restaurant?.geometry?.location?.lng ?? 0)
