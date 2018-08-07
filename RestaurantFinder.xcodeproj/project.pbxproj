@@ -13,7 +13,7 @@
 		5CF15ED4210F069000F0F4A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF15ED3210F069000F0F4A6 /* Assets.xcassets */; };
 		5CF15ED7210F069000F0F4A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF15ED5210F069000F0F4A6 /* LaunchScreen.storyboard */; };
 		5CF15EE521101F4A00F0F4A6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF15EE421101F4A00F0F4A6 /* DataManager.swift */; };
-		5CF15EE72110BBC900F0F4A6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF15EE62110BBC900F0F4A6 /* Result.swift */; };
+		5CF15EE72110BBC900F0F4A6 /* PlaceSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF15EE62110BBC900F0F4A6 /* PlaceSearchResults.swift */; };
 		5CF15EE92110BD7700F0F4A6 /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF15EE82110BD7700F0F4A6 /* GoogleDataProvider.swift */; };
 		5CF15EEB2110C33700F0F4A6 /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF15EEA2110C33700F0F4A6 /* PlaceMarker.swift */; };
 		5CF15EED2110D06E00F0F4A6 /* RestaurantInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF15EEC2110D06E00F0F4A6 /* RestaurantInformation.swift */; };
@@ -30,7 +30,7 @@
 		5CF15ED6210F069000F0F4A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CF15ED8210F069000F0F4A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CF15EE421101F4A00F0F4A6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		5CF15EE62110BBC900F0F4A6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5CF15EE62110BBC900F0F4A6 /* PlaceSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchResults.swift; sourceTree = "<group>"; };
 		5CF15EE82110BD7700F0F4A6 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
 		5CF15EEA2110C33700F0F4A6 /* PlaceMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
 		5CF15EEC2110D06E00F0F4A6 /* RestaurantInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInformation.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		5CF15EE0210F085300F0F4A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5CF15EE62110BBC900F0F4A6 /* Result.swift */,
+				5CF15EE62110BBC900F0F4A6 /* PlaceSearchResults.swift */,
 				5CF15EE82110BD7700F0F4A6 /* GoogleDataProvider.swift */,
 				5CF15EEA2110C33700F0F4A6 /* PlaceMarker.swift */,
 			);
@@ -291,7 +291,7 @@
 				5CF15EED2110D06E00F0F4A6 /* RestaurantInformation.swift in Sources */,
 				5CF15EE521101F4A00F0F4A6 /* DataManager.swift in Sources */,
 				5CF15EEB2110C33700F0F4A6 /* PlaceMarker.swift in Sources */,
-				5CF15EE72110BBC900F0F4A6 /* Result.swift in Sources */,
+				5CF15EE72110BBC900F0F4A6 /* PlaceSearchResults.swift in Sources */,
 				5CF15ECD210F068300F0F4A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

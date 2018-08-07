@@ -10,16 +10,20 @@ import UIKit
 import CoreLocation
 import Alamofire
 
-typealias PlacesCompletion = ([Results]) -> Void
+typealias PlacesCompletion = ([Place]) -> Void
 typealias PhotoCompletion = (UIImage?) -> Void
 
 class GoogleDataProvider {
     
     private static var photoCache: [String: UIImage] = [:]
     
+    static let sharedGoogleDataProvider = GoogleDataProvider()
+    
+    private init() {}
+    
     let sessionManager = SessionManager()
     static var jsonFromGoogleAPI: Any?
-    static var resultsArr: [Results] = []
+    static var resultsArr: [Place] = []
     
     func fetchPlacesNearCoordinate(_ coordinate: CLLocationCoordinate2D, radius: Double, types:[String], completion: @escaping PlacesCompletion) {
         
@@ -32,7 +36,7 @@ class GoogleDataProvider {
         
         Alamofire.request(searchURL, method: .post, encoding: JSONEncoding.default).responseJSON { response in
             if let itemData = response.data {
-                let model = DataManager.shared.decode(model: Result.self, from: itemData)
+                let model = DataManager.shared.decode(model: PlaceSearchResults.self, from: itemData)
                 if let results = model?.results {
                     results.forEach { result in
                         GoogleDataProvider.resultsArr.append(result)
