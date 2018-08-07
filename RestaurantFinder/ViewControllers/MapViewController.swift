@@ -12,7 +12,7 @@ import GooglePlaces
 
 class MapViewController: UIViewController {
     
-    private let dataProvider = GoogleDataProvider()
+    private let dataProvider = GoogleDataProvider.sharedGoogleDataProvider
     private let searchRadius: Double = 20000
     
     var locationManager = CLLocationManager()
@@ -116,11 +116,8 @@ extension MapViewController: GMSMapViewDelegate {
         let restaurantInfoVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RestaurantInformation") as? RestaurantInformation
         self.navigationController?.pushViewController(restaurantInfoVC!, animated: true)
         
-        if let data = marker.userData as? Results {
-            restaurantInfoVC?.restaurantName = data.name
-            restaurantInfoVC?.restaurantLat = data.geometry?.location?.lat?.description
-            restaurantInfoVC?.restaurantLng = data.geometry?.location?.lng?.description
-            restaurantInfoVC?.restaurantAddress = data.vicinity
+        if let restaurant = marker.userData as? Place {
+            restaurantInfoVC?.restaurant = restaurant
         }
         
         GoogleDataProvider.resultsArr = []
